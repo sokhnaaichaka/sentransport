@@ -1,0 +1,46 @@
+.stat-reseau {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-titre {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.stat-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat-carte {
+  text-align: center;
+  padding: 12px;
+  background-color: #f5f6fa;
+  border-radius: 8px;
+  border-top: 3px solid #0a6e31;
+}
+
+.stat-valeur {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0a6e31;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .stat-grille {
+    grid-template-columns: 1fr;
+  }
+}
