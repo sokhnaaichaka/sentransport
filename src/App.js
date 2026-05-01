@@ -1,20 +1,23 @@
 import './App.css';
 import Header from './Header';
-import Footer from './Foooter';
-import Statistique from './Statistique';
+import ListeLignes from './ListeLignes';
+import Footer from './Footer';
 
 function App() {
-  
+  const lignes = [
+    { id: 1, numero: "1", depart: "Parcelles Assainies", arrivee: "Plateau", arrets: 14 },
+    { id: 2, numero: "7", depart: "Guediawaye", arrivee: "Place Obé", arrets: 18 },
+    { id: 3, numero: "15", depart: "Pikine", arrivee: "Medina", arrets: 12 },
+    { id: 4, numero: "23", depart: "Ouakam", arrivee: "Grand Dakar", arrets: 10 },
+    { id: 5, numero: "8", depart: "Almadies", arrivee: "Colobane", arrets: 16 },
+    { id: 6, numero: "12", depart: "Yoff", arrivee: "Sandaga", arrets: 11 },
+  ];
+
   return (
     <div className="App">
       <Header />
       <main className="contenu">
-        <p>Bienvenue ! Cette application vous aide a trouver votre ligne de bus a Dakar.</p>
-        <div>
-          <Statistique chiffre="10" libelle="lignes" />
-          <Statistique chiffre="150" libelle="arrêts" />
-          <Statistique chiffre="45" libelle="bus" />
-        </div>
+        <ListeLignes lignes={lignes} />
       </main>
       <Footer />
     </div>
