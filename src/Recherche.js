@@ -1,6 +1,6 @@
 import './Recherche.css';
 
-function Recherche({ valeur, onChange }) {
+function Recherche({ valeur, onChange, onEffacer }) {
   return (
     <div className="recherche">
       <input
@@ -10,6 +10,15 @@ function Recherche({ valeur, onChange }) {
         value={valeur}
         onChange={e => onChange(e.target.value)}
       />
+      {valeur && (
+        <button
+          type="button"
+          className="recherche-effacer"
+          onClick={onEffacer}
+        >
+          Effacer
+        </button>
+      )}
     </div>
   );
 }

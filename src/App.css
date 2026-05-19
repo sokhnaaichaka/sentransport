@@ -15,6 +15,26 @@
   flex: 1;
 }
 
+.aucun-resultat {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.compteur-recherches {
+  background-color: #fef9f3;
+  border-left: 4px solid #e67e22;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin: 0 0 16px 0;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 600px) {
   .contenu {
     padding: 12px;
