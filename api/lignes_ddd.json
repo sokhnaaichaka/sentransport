@@ -44,5 +44,17 @@
     "arrets": 11,
     "listeArrets": ["Yoff Village", "Aeroport LSS",
       "Parcelles U17", "Grand Yoff", "HLM", "Sandaga"]
+  },
+  {
+    "id": 7, "numero": "10",
+    "depart": "Liberte 5", "arrivee": "Yoff",
+    "arrets": 5,
+    "listeArrets": ["Liberte 5", "Mermoz", "Ouakam", "Yoff Apecsy", "Yoff Village"]
+  },
+  {
+    "id": 8, "numero": "20",
+    "depart": "Plateau", "arrivee": "Rufisque",
+    "arrets": 6,
+    "listeArrets": ["Plateau", "Medina", "Hann Maristes", "Thiaroye", "Keur Massar", "Rufisque"]
   }
 ]

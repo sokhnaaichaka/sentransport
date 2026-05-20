@@ -58,6 +58,47 @@
   font-size: 0.9rem;
 }
 
+.btn-recharger {
+  display: block;
+  margin: 12px auto 20px auto;
+  padding: 8px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-recharger:hover {
+  background-color: #229954;
+}
+
+.btn-recharger:active {
+  transform: scale(0.97);
+}
+
+.message-chargement-detail {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  margin: 16px 0;
+  font-size: 0.95rem;
+}
+
+.message-erreur-detail {
+  background-color: #fff5f5;
+  border: 1px solid #e74c3c;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  color: #c0392b;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .contenu {
     padding: 12px;
