@@ -24,6 +24,41 @@
   border-radius: 6px;
 }
 
+.carte-container {
+  margin-top: 24px;
+  position: relative;
+}
+
+.btn-centrer {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  background-color: #0a6e31;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.arrets-proches-liste {
+  margin-bottom: 12px;
+}
+
+.arrets-proches-titre {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.arret-proche--premier {
+  font-weight: bold;
+  background-color: #fff3e0;
+  border-left: 3px solid orange;
+}
+
 @media (max-width: 600px) {
   .carte {
     height: 300px;
