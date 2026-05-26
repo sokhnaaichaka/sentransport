@@ -4,6 +4,7 @@ import Header from './Header';
 import Recherche from './Recherche';
 import LigneBus from './LigneBus';
 import DetailLigne from './DetailLigne';
+import Carte from './Carte';
 import Footer from './Footer';
 
 function App() {
@@ -12,13 +13,13 @@ function App() {
   const [erreur, setErreur] = useState(null);
   const [recherche, setRecherche] = useState("");
 
-  // === Exercice 3 : on sépare l'ID inspecté et les détails chargés ===
+
   const [idEnCours, setIdEnCours] = useState(null);
   const [ligneSelectionnee, setLigneSelectionnee] = useState(null);
   const [detailChargement, setDetailChargement] = useState(false);
   const [detailErreur, setDetailErreur] = useState(null);
 
-  // Fonction extraite (Exercice 1) — chargement de la liste
+  
   function chargerLignes() {
     setChargement(true);
     setErreur(null);
@@ -50,7 +51,6 @@ function App() {
     l.numero.includes(recherche)
   );
 
-  // === Exercice 3 : on charge les détails à la demande depuis Flask ===
   function handleClickLigne(ligne) {
     // Re-clic sur la ligne déjà ouverte → on referme
     if (idEnCours === ligne.id) {
@@ -151,6 +151,7 @@ function App() {
         )}
 
         {ligneSelectionnee && <DetailLigne ligne={ligneSelectionnee} />}
+      <Carte />
       </main>
       <Footer />
     </div>

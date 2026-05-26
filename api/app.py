@@ -5,9 +5,12 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# Charger les donnees depuis le fichier JSON
+# Charger les donnees depuis les fichiers JSON
 with open("lignes_ddd.json", "r") as f:
     lignes = json.load(f)
+
+with open("arrets.json", "r") as f:
+    arrets = json.load(f)
 
 
 @app.route("/")
@@ -38,17 +41,10 @@ def get_ligne(ligne_id):
     return jsonify(ligne)
 
 
-# EXERCICE 1
-
 @app.route("/arrets")
 def get_arrets():
-    arrets = set()
-    for ligne in lignes:
-        for arret in ligne["listeArrets"]:
-            arrets.add(arret)
-    return jsonify(sorted(list(arrets)))
+    return jsonify(arrets)
 
-# EXERCICE 2
 
 @app.route("/stats")
 def get_stats():
@@ -61,7 +57,6 @@ def get_stats():
         "ligne_plus_arrets": ligne_max["numero"]
     })
 
-# EXERCICE 3
 
 @app.route("/lignes/recherche")
 def recherche_lignes():
